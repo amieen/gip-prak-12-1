@@ -50,3 +50,9 @@ void MyRectangle::draw() {
         this->canvas_ptr->draw_rectangle(x1, y1, x2, y2);
     }
 }
+MyRectangle MyRectangle::operator * (unsigned int i){
+    unsigned int new_x2 = this->x1 + (this->x2 - this->x1) * i;
+    unsigned int new_y2 = this->y1 + (this->y2 - this->y1) * i;
+    MyRectangle r2 (*(this->canvas_ptr),this->x1,this->y1,this->x2=new_x2,this->y2=new_y2);
+    return r2;    
+}

@@ -25,6 +25,8 @@ public:
     void set_canvas_ptr(MyCanvas* a);
     MyRectangle(MyCanvas& canvas, unsigned int x1, unsigned int y1, unsigned int x2, unsigned int y2);
     void draw();
+    MyRectangle operator*(unsigned int i);
+
 
 };
 
